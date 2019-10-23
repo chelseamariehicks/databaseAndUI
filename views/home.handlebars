@@ -1,0 +1,23 @@
+<h1 id="main-header">Workout Tracker Database</h1>
+<h2 id="main-byline">Built by Chelsea Marie Hicks</h2>
+<h2 class="headers">Add Completed Exercise</h2>
+<form class="add-form">
+    <fieldset>
+        <div><label for="date">Date: </label>
+            <input id="new-date" type="date" name="date"></div>
+        <div><label for="name">Exercise: </label>
+            <input id="new-name" type="text" name="name"></div>
+        <div><label for="reps">Number of Reps: </label>
+            <input class="num-input" id="new-reps" type="number" name="reps"></div>
+        <div><label for="weight">Weight: </label>
+            <input class="num-input" id="new-weight" type="number" name="weight"></div>
+        <div><label for="unit">Units: </label>
+            <input id="new-unit" type="radio" name="unit" value="1" checked>lbs
+            <input type="radio" name="unit" value="0">kgs</div>
+        <input id="addExercise" type="submit" value="Add Exercise">
+    </fieldset>
+</form>
+
+<h3 class="headers">Completed Exercises</h3>
+<div id="workout-table"></div>
+<script src="/script.js"></script>
