@@ -1,11 +1,12 @@
-# databaseAndUI
-You need to create a single page application with the following functionality:  
-Visiting the page will show a table displaying all completed exercises. The header should list all the columns (id should not be displayed in the header or in the table itself. Use hidden inputs to keep track of the id).  At the top of the page there should be a form that let you enter in all the data needed to make a new entry in the table with a button to submit it. Hitting that button should add the row to the table if it was successfully added to the database. If it was not successfully added (probably because name was left blank and it is required) it should not add it to the table.  Each row should have two buttons. One to delete the row and one to edit the row. Hitting the delete button should immediately remove the row from the table and from the database.  Hitting the edit button should make it possible to edit the data. For this function it is OK to go to another page which will allow you to edit that specific exercise, save it and then take you back to the main page. The form to edit the exercise should be pre-populated with the existing data from that row (in other words if I go to the edit page, and then hit save, nothing should change because all the old values were in the edit form).  All interactions, other than updating an exercise, should happen via Ajax. This means that at no time should the page refresh. Instead Ajax calls should be used to GET or POST to the server and it should use the data the server provides to update the page.
+A single page application for maintaining workouts with the following functionality:
 
-If you hit delete on one of those rows it gets deleted without the page refreshing. Your page should do this and it should update the database at the same time to reflect the deleted data. It should essentially happen in reverse when you add a row. You hit add and the table is populated with a new row.
+-Visiting the page will show a table displaying all completed exercises. 
+-At the top of the page there is a form to allow user to enter in all the data needed to make a new entry in the table with a button to
+submit it. 
+-Submitting workout adds a row to the table if it was successfully added to the database. If it was not successfully added (due to user
+entry error) it won't be added to the table.  
+-Each row has delete and edit row options.
+-The form to edit the exercise is pre-populated with the existing data from that row.
 
-For the "single page", it means you should use one URL for both types of requests. You will have only one handlebars file which is home.handlebars. But in your server side code, you will write two methods:
-1) app.get('/',..........)
-2) app.post('/',..........)
+All interactions, other than updating an exercise, happen via Ajax using Ajax calls to GET or POST to the server.
 
-These methods will make sure to call the get method when the client sends a GET request and call the post method when the client sends a POST request.
